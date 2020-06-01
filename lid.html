@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="libs/swiper/swiper.min.css" />
     <link rel="stylesheet" href="libs/select2/select2.min.css" />
     <link rel="stylesheet" href="libs/datepicker/datepicker.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -76,6 +77,11 @@
                 </div>
               </div>
             </div>
+            <div class="header-burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </div>
@@ -85,63 +91,66 @@
             <h3>
               Свежие новости
             </h3>
-            <div class="news-list">
-              <a href="news-detail.html" class="news-item">
-                <div class="news-item-img">
-                  <img src="images/new-1.jpg" alt="" />
-                </div>
-                <div class="news-item-content">
-                  <div class="news-item-date">
-                    29.03.2020
+            <div class="news-list swiper-container">
+              <div class="swiper-wrapper">
+                <a href="news-detail.html" class="news-item swiper-slide">
+                  <div class="news-item-img">
+                    <img src="images/new-1.jpg" alt="" />
                   </div>
-                  <div class="news-item-text">
-                    Мы даем рекламу, но продажи не растут. Что моя команда
-                    делает не так?
+                  <div class="news-item-content">
+                    <div class="news-item-date">
+                      29.03.2020
+                    </div>
+                    <div class="news-item-text">
+                      Мы даем рекламу, но продажи не растут. Что моя команда
+                      делает не так?
+                    </div>
                   </div>
-                </div>
-              </a>
-              <a href="news-detail.html" class="news-item">
-                <div class="news-item-img">
-                  <img src="images/new-2.jpg" alt="" />
-                </div>
-                <div class="news-item-content">
-                  <div class="news-item-date">
-                    29.03.2020
+                </a>
+                <a href="news-detail.html" class="news-item swiper-slide">
+                  <div class="news-item-img">
+                    <img src="images/new-2.jpg" alt="" />
                   </div>
-                  <div class="news-item-text">
-                    Мы даем рекламу, но продажи не растут. Что моя команда
-                    делает не так?
+                  <div class="news-item-content">
+                    <div class="news-item-date">
+                      29.03.2020
+                    </div>
+                    <div class="news-item-text">
+                      Мы даем рекламу, но продажи не растут. Что моя команда
+                      делает не так?
+                    </div>
                   </div>
-                </div>
-              </a>
-              <a href="news-detail.html" class="news-item">
-                <div class="news-item-img">
-                  <img src="images/new-3.jpg" alt="" />
-                </div>
-                <div class="news-item-content">
-                  <div class="news-item-date">
-                    29.03.2020
+                </a>
+                <a href="news-detail.html" class="news-item swiper-slide">
+                  <div class="news-item-img">
+                    <img src="images/new-3.jpg" alt="" />
                   </div>
-                  <div class="news-item-text">
-                    Мы даем рекламу, но продажи не растут. Что моя команда
-                    делает не так?
+                  <div class="news-item-content">
+                    <div class="news-item-date">
+                      29.03.2020
+                    </div>
+                    <div class="news-item-text">
+                      Мы даем рекламу, но продажи не растут. Что моя команда
+                      делает не так?
+                    </div>
                   </div>
-                </div>
-              </a>
-              <a href="news-detail.html" class="news-item">
-                <div class="news-item-img">
-                  <img src="images/new-4.jpg" alt="" />
-                </div>
-                <div class="news-item-content">
-                  <div class="news-item-date">
-                    29.03.2020
+                </a>
+                <a href="news-detail.html" class="news-item swiper-slide">
+                  <div class="news-item-img">
+                    <img src="images/new-4.jpg" alt="" />
                   </div>
-                  <div class="news-item-text">
-                    Мы даем рекламу, но продажи не растут. Что моя команда
-                    делает не так?
+                  <div class="news-item-content">
+                    <div class="news-item-date">
+                      29.03.2020
+                    </div>
+                    <div class="news-item-text">
+                      Мы даем рекламу, но продажи не растут. Что моя команда
+                      делает не так?
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -180,9 +189,9 @@
                   <span>Дата создания лида</span>
                 </div>
                 <div class="lid-state-row">
-                  <span class="inwork">В работе</span>
-                    <span>1982</span>
-                    <span>29.05.2020</span>
+                  <span class="inwork" data-title="Статус обработки лида">В работе</span>
+                    <span data-title="Лид ID">1982</span>
+                    <span data-title="Дата создания лида">29.05.2020</span>
                   </a>
                 </div>
                 <div class="lid-state-history">
@@ -227,7 +236,7 @@
                   <span>Комментарий при передаче лида</span>
                 </div>
                 <div class="lid-inf-row">
-                  <span>Лучше не звонить днем, всегда занят, часто находится в командировках</span>
+                  <span data-title="Комментарий при передаче лида">Лучше не звонить днем, всегда занят, часто находится в командировках</span>
                 </div>
                 <div class="lid-inf-head-3">
                   <span>Контактное лицо</span>
@@ -235,23 +244,23 @@
                   <span>Почта</span>
                 </div>
                 <div class="lid-inf-row-3">
-                  <span>Ирина Жильцова Владимировна</span>
-                  <span>+79112862563</span>
-                  <span>k.konst-powered1991@gmail.com</span>
+                  <span data-title="Контактное лицо">Ирина Жильцова Владимировна</span>
+                  <span data-title="Телефон">+79112862563</span>
+                  <span data-title="Почта">k.konst-powered1991@gmail.com</span>
                 </div>
                 <div class="lid-inf-head">
                   <span>Юридическая форма</span>
                 </div>
                 <div class="lid-inf-row">
-                  <span>Индивидуальный предприниматель</span>
+                  <span data-title="Юридическая форма">Индивидуальный предприниматель</span>
                 </div>
                 <div class="lid-inf-head-2">
                   <span>Колличество касс за полную стоимость</span>
                   <span>Колличество касс по “Касса на прокат”</span>
                 </div>
                 <div class="lid-inf-row-2">
-                  <span>10</span>
-                  <span>1</span>
+                  <span data-title="Колличество касс за полную стоимость">10</span>
+                  <span data-title="Колличество касс по “Касса на прокат”">1</span>
               </div>
             </div>
           </div>
@@ -319,6 +328,7 @@
       </div>
     </div>
     <script src="js/jquery-3.3.1.js"></script>
+    <script src="libs/swiper/swiper.min.js"></script>
     <script src="libs/datepicker/datepicker.min.js"></script>
     <script src="libs/select2/select2.min.js"></script>
     <script src="js/main.js"></script>

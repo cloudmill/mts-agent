@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="libs/swiper/swiper.min.css" />
     <link rel="stylesheet" href="libs/select2/select2.min.css" />
     <link rel="stylesheet" href="libs/datepicker/datepicker.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -184,7 +185,6 @@
                 </div>
                 <div class="field field-date">
                   <label for="date">
-                    <i class="icon-calendar"></i>
                     <input
                       type="text"
                       autocomplete="off"
@@ -195,10 +195,10 @@
                       id="date"
                     />
                   </label>
+                  <i class="icon-calendar"></i>
                 </div>
                 <div class="field field-base">
                   <label for="s">
-                    <i class="icon-search"></i>
                     <input
                       type="text"
                       name="s"
@@ -206,6 +206,8 @@
                       placeholder="Поиск по таблице"
                     />
                   </label>
+                  <i class="icon-search"></i>
+                  <i class="icon-close clear-search"></i>
                 </div>
               </form>
               <div class="empty">
@@ -278,6 +280,7 @@
       </div>
     </div>
     <script src="js/jquery-3.3.1.js"></script>
+    <script src="libs/swiper/swiper.min.js"></script>
     <script src="libs/datepicker/datepicker.min.js"></script>
     <script src="libs/select2/select2.min.js"></script>
     <script src="js/main.js"></script>

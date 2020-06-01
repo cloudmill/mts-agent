@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="libs/swiper/swiper.min.css" />
     <link rel="stylesheet" href="libs/select2/select2.min.css" />
     <link rel="stylesheet" href="libs/datepicker/datepicker.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -76,6 +77,11 @@
                 </div>
               </div>
             </div>
+            <div class="header-burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </div>
@@ -85,63 +91,66 @@
             <h3>
               Свежие новости
             </h3>
-            <div class="news-list">
-              <a href="news-detail.html" class="news-item">
-                <div class="news-item-img">
-                  <img src="images/new-1.jpg" alt="" />
-                </div>
-                <div class="news-item-content">
-                  <div class="news-item-date">
-                    29.03.2020
+            <div class="news-list swiper-container">
+              <div class="swiper-wrapper">
+                <a href="news-detail.html" class="news-item swiper-slide">
+                  <div class="news-item-img">
+                    <img src="images/new-1.jpg" alt="" />
                   </div>
-                  <div class="news-item-text">
-                    Мы даем рекламу, но продажи не растут. Что моя команда
-                    делает не так?
+                  <div class="news-item-content">
+                    <div class="news-item-date">
+                      29.03.2020
+                    </div>
+                    <div class="news-item-text">
+                      Мы даем рекламу, но продажи не растут. Что моя команда
+                      делает не так?
+                    </div>
                   </div>
-                </div>
-              </a>
-              <a href="news-detail.html" class="news-item">
-                <div class="news-item-img">
-                  <img src="images/new-2.jpg" alt="" />
-                </div>
-                <div class="news-item-content">
-                  <div class="news-item-date">
-                    29.03.2020
+                </a>
+                <a href="news-detail.html" class="news-item swiper-slide">
+                  <div class="news-item-img">
+                    <img src="images/new-2.jpg" alt="" />
                   </div>
-                  <div class="news-item-text">
-                    Мы даем рекламу, но продажи не растут. Что моя команда
-                    делает не так?
+                  <div class="news-item-content">
+                    <div class="news-item-date">
+                      29.03.2020
+                    </div>
+                    <div class="news-item-text">
+                      Мы даем рекламу, но продажи не растут. Что моя команда
+                      делает не так?
+                    </div>
                   </div>
-                </div>
-              </a>
-              <a href="news-detail.html" class="news-item">
-                <div class="news-item-img">
-                  <img src="images/new-3.jpg" alt="" />
-                </div>
-                <div class="news-item-content">
-                  <div class="news-item-date">
-                    29.03.2020
+                </a>
+                <a href="news-detail.html" class="news-item swiper-slide">
+                  <div class="news-item-img">
+                    <img src="images/new-3.jpg" alt="" />
                   </div>
-                  <div class="news-item-text">
-                    Мы даем рекламу, но продажи не растут. Что моя команда
-                    делает не так?
+                  <div class="news-item-content">
+                    <div class="news-item-date">
+                      29.03.2020
+                    </div>
+                    <div class="news-item-text">
+                      Мы даем рекламу, но продажи не растут. Что моя команда
+                      делает не так?
+                    </div>
                   </div>
-                </div>
-              </a>
-              <a href="news-detail.html" class="news-item">
-                <div class="news-item-img">
-                  <img src="images/new-4.jpg" alt="" />
-                </div>
-                <div class="news-item-content">
-                  <div class="news-item-date">
-                    29.03.2020
+                </a>
+                <a href="news-detail.html" class="news-item swiper-slide">
+                  <div class="news-item-img">
+                    <img src="images/new-4.jpg" alt="" />
                   </div>
-                  <div class="news-item-text">
-                    Мы даем рекламу, но продажи не растут. Что моя команда
-                    делает не так?
+                  <div class="news-item-content">
+                    <div class="news-item-date">
+                      29.03.2020
+                    </div>
+                    <div class="news-item-text">
+                      Мы даем рекламу, но продажи не растут. Что моя команда
+                      делает не так?
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -184,7 +193,6 @@
                 </div>
                 <div class="field field-date">
                   <label for="date">
-                    <i class="icon-calendar"></i>
                     <input
                       type="text"
                       autocomplete="off"
@@ -195,10 +203,10 @@
                       id="date"
                     />
                   </label>
+                  <i class="icon-calendar"></i>
                 </div>
                 <div class="field field-base">
                   <label for="s">
-                    <i class="icon-search"></i>
                     <input
                       type="text"
                       name="s"
@@ -206,6 +214,8 @@
                       placeholder="Поиск по таблице"
                     />
                   </label>
+                  <i class="icon-search"></i>
+                  <i class="icon-close clear-search"></i>
                 </div>
               </form>
               <div class="table">
@@ -220,18 +230,18 @@
                 </div>
                 <div class="tbody">
                   <a href="" class="tr">
-                    <span class="inwork">В работе</span>
-                    <span>1000</span>
-                    <span>23.04.2019</span>
-                    <span>Константин Константинтинопольский Игоревич</span>
-                    <span>+7 (911) 286 25 63</span>
+                    <span data-title='Статус обработки' class="inwork">В работе</span>
+                    <span data-title='ID' >1000</span>
+                    <span data-title='Дата создания'>23.04.2019</span>
+                    <span data-title='Контактное лицо'>Константин Константинтинопольский Игоревич</span>
+                    <span data-title='ID'>+7 (911) 286 25 63</span>
                   </a>
                   <a href="" class="tr">
-                    <span class="create">Создан</span>
-                    <span>1000</span>
-                    <span>23.04.2019</span>
-                    <span>Константин Константинтинопольский Игоревич</span>
-                    <span>+7 (911) 286 25 63</span>
+                    <span data-title='Статус обработки'  class="create">Создан</span>
+                    <span data-title='ID'>1000</span>
+                    <span data-title='Дата создания'>23.04.2019</span>
+                    <span data-title='Контактное лицо'>Константин Константинтинопольский Игоревич</span>
+                    <span data-title='Контактный телефон'>+7 (911) 286 25 63</span>
                     <div class="info">
                       <i class="icon-mess"></i>
                       <div class="info-box">
@@ -241,11 +251,11 @@
                     </div>
                   </a>
                   <a href="" class="tr">
-                    <span class="reject">Отказ</span>
-                    <span>1000</span>
-                    <span>23.04.2019</span>
-                    <span>Константин Константинтинопольский Игоревич</span>
-                    <span>+7 (911) 286 25 63</span>
+                    <span data-title='Статус обработки'  class="reject">Отказ</span>
+                    <span data-title='ID'>1000</span>
+                    <span data-title='Дата создания'>23.04.2019</span>
+                    <span data-title='Контактное лицо'>Константин Константинтинопольский Игоревич</span>
+                    <span data-title='Контактный телефон'>+7 (911) 286 25 63</span>
                     <div class="info">
                       <i class="icon-mess"></i>
                       <div class="info-box">
@@ -255,11 +265,11 @@
                     </div>
                   </a>
                   <a href="" class="tr">
-                    <span class="paid">Выплачен</span>
-                    <span>1000</span>
-                    <span>23.04.2019</span>
-                    <span>Константин Константинтинопольский Игоревич</span>
-                    <span>+7 (911) 286 25 63</span>
+                    <span data-title='Статус обработки'  class="paid">Выплачен</span>
+                    <span data-title='ID'>1000</span>
+                    <span data-title='Дата создания'>23.04.2019</span>
+                    <span data-title='Контактное лицо'>Константин Константинтинопольский Игоревич</span>
+                    <span data-title='Контактный телефон'>+7 (911) 286 25 63</span>
                     <div class="info">
                       <i class="icon-mess"></i>
                       <div class="info-box">
@@ -269,32 +279,32 @@
                     </div>
                   </a>
                   <a href="" class="tr">
-                    <span class="inwork">В работе</span>
-                    <span>1000</span>
-                    <span>23.04.2019</span>
-                    <span>Константин Константинтинопольский Игоревич</span>
-                    <span>+7 (911) 286 25 63</span>
+                    <span data-title='Статус обработки'  class="inwork">В работе</span>
+                    <span data-title='ID'>1000</span>
+                    <span data-title='Дата создания'>23.04.2019</span>
+                    <span data-title='Контактное лицо'>Константин Константинтинопольский Игоревич</span>
+                    <span data-title='Контактный телефон'>+7 (911) 286 25 63</span>
                   </a>
                   <a href="" class="tr">
-                    <span class="create">Создан</span>
-                    <span>1000</span>
-                    <span>23.04.2019</span>
-                    <span>Константин Константинтинопольский Игоревич</span>
-                    <span>+7 (911) 286 25 63</span>
+                    <span data-title='Статус обработки'  class="create">Создан</span>
+                    <span data-title='ID'>1000</span>
+                    <span data-title='Дата создания'>23.04.2019</span>
+                    <span data-title='Контактное лицо'>Константин Константинтинопольский Игоревич</span>
+                    <span data-title='Контактный телефон'>+7 (911) 286 25 63</span>
                   </a>
                   <a href="" class="tr">
-                    <span class="reject">Отказ</span>
-                    <span>1000</span>
-                    <span>23.04.2019</span>
-                    <span>Константин Константинтинопольский Игоревич</span>
-                    <span>+7 (911) 286 25 63</span>
+                    <span data-title='Статус обработки'  class="reject">Отказ</span>
+                    <span data-title='ID'>1000</span>
+                    <span data-title='Дата создания'>23.04.2019</span>
+                    <span data-title='Контактное лицо'>Константин Константинтинопольский Игоревич</span>
+                    <span data-title='Контактный телефон'>+7 (911) 286 25 63</span>
                   </a>
                   <a href="" class="tr">
-                    <span class="paid">Выплачен</span>
-                    <span>1000</span>
-                    <span>23.04.2019</span>
-                    <span>Константин Константинтинопольский Игоревич</span>
-                    <span>+7 (911) 286 25 63</span>
+                    <span data-title='Статус обработки'  class="paid">Выплачен</span>
+                    <span data-title='ID'>1000</span>
+                    <span data-title='Дата создания'>23.04.2019</span>
+                    <span data-title='Контактное лицо'>Константин Константинтинопольский Игоревич</span>
+                    <span data-title='Контактный телефон'>+7 (911) 286 25 63</span>
                     <div class="info">
                       <i class="icon-mess"></i>
                       <div class="info-box">
@@ -304,11 +314,11 @@
                     </div>
                   </a>
                   <a href="" class="tr">
-                    <span class="inwork">В работе</span>
-                    <span>1000</span>
-                    <span>23.04.2019</span>
-                    <span>Константин Константинтинопольский Игоревич</span>
-                    <span>+7 (911) 286 25 63</span>
+                    <span data-title='Статус обработки'  class="inwork">В работе</span>
+                    <span data-title='ID'>1000</span>
+                    <span data-title='Дата создания'>23.04.2019</span>
+                    <span data-title='Контактное лицо'>Константин Константинтинопольский Игоревич</span>
+                    <span data-title='Контактный телефон'>+7 (911) 286 25 63</span>
                     <div class="info">
                       <i class="icon-mess"></i>
                       <div class="info-box">
@@ -318,11 +328,11 @@
                     </div>
                   </a>
                   <a href="" class="tr">
-                    <span class="create">Создан</span>
-                    <span>1000</span>
-                    <span>23.04.2019</span>
-                    <span>Константин Константинтинопольский Игоревич</span>
-                    <span>+7 (911) 286 25 63</span>
+                    <span data-title='Статус обработки'  class="create">Создан</span>
+                    <span data-title='ID'>1000</span>
+                    <span data-title='Дата создания'>23.04.2019</span>
+                    <span data-title='Контактное лицо'>Константин Константинтинопольский Игоревич</span>
+                    <span data-title='Контактный телефон'>+7 (911) 286 25 63</span>
                     <div class="info">
                       <i class="icon-mess"></i>
                       <div class="info-box">
@@ -332,18 +342,18 @@
                     </div>
                   </a>
                   <a href="" class="tr">
-                    <span class="reject">Отказ</span>
-                    <span>1000</span>
-                    <span>23.04.2019</span>
-                    <span>Константин Константинтинопольский Игоревич</span>
-                    <span>+7 (911) 286 25 63</span>
+                    <span data-title='Статус обработки'  class="reject">Отказ</span>
+                    <span data-title='ID'>1000</span>
+                    <span data-title='Дата создания'>23.04.2019</span>
+                    <span data-title='Контактное лицо'>Константин Константинтинопольский Игоревич</span>
+                    <span data-title='Контактный телефон'>+7 (911) 286 25 63</span>
                   </a>
                   <a href="" class="tr">
-                    <span class="paid">Выплачен</span>
-                    <span>1000</span>
-                    <span>23.04.2019</span>
-                    <span>Константин Константинтинопольский Игоревич</span>
-                    <span>+7 (911) 286 25 63</span>
+                    <span data-title='Статус обработки'  class="paid">Выплачен</span>
+                    <span data-title='ID'>1000</span>
+                    <span data-title='Дата создания'>23.04.2019</span>
+                    <span data-title='Контактное лицо'>Константин Константинтинопольский Игоревич</span>
+                    <span data-title='Контактный телефон'>+7 (911) 286 25 63</span>
                   </a>
                 </div>
               </div>
@@ -357,7 +367,6 @@
                     <a href="" class="navigate-link">2</a>
                     <a href="" class="navigate-link">3</a>
                     <a href="" class="navigate-link">4</a>
-                    <a href="" class="navigate-link">5</a>
                     <span class="navigate-link">...</span>
                     <a href="" class="navigate-link">15</a>
                   </div>
@@ -442,6 +451,7 @@
       </div>
     </div>
     <script src="js/jquery-3.3.1.js"></script>
+    <script src="libs/swiper/swiper.min.js"></script>
     <script src="libs/datepicker/datepicker.min.js"></script>
     <script src="libs/select2/select2.min.js"></script>
     <script src="js/main.js"></script>
